@@ -1,0 +1,75 @@
+/* force scrollbar */
+html { overflow-y: scroll; }
+a { 
+  text-decoration: none;
+}
+
+.main {
+  width: calc(100% - 360px);
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+.grid-sizer,
+.grid-item {
+  width: calc((100% - 16px) / 3);
+}
+
+.grid-item {
+  float: left;
+  margin-bottom: 10px;
+  transform: scale(0);
+	animation: scaleUp 0.65s ease-in-out forwards;
+  animation-timing-function: cubic-bezier(.05,.96,.83,.67);
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+
+@keyframes scaleUp {
+	0% { }
+  50% {
+    transform: scale(1.2);
+  }
+	100% {  
+    transform: scale(1);
+    opacity: 1; 
+  }
+}
+.animation-delay-1 {
+  animation-delay: .3s;
+}
+.animation-delay-2 {
+  animation-delay: .6s;
+}
+.animation-delay-3 {
+  animation-delay: .8s;
+}
+.animation-delay-4 {
+  animation-delay: 1s;
+}
+.animation-delay-5 {
+  animation-delay: 1.3s;
+}
+.animation-delay-6 {
+  animation-delay: 1.6s;
+}
+.animation-delay-7 {
+  animation-delay: 1.8s;
+}
+.animation-delay-8 {
+  animation-delay: 2s;
+}
+.animation-delay-9 {
+  animation-delay: 2.3s;
+}

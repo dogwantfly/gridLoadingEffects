@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GridLoadingEffects</title>
+  <link rel="stylesheet" href="./css/all.css">
+</head>
+  <body>
+    <div class="d-flex justify-content-end">
+      <nav class="sidebar vh-100 pt-5 d-flex flex-column align-items-center">
+        <div class="px-4">
+          <h1>
+            Eric Johnson
+          </h1>
+          <small class="fs-5">
+            Photographer
+          </small>
+        </div>
+        <ul class="sidebar-list ps-5 pt-4">
+          <li>
+            <a href="#" class="sidebar-link active pe-4">
+              MOUNTAIN
+            </a>
+          </li>
+          <li>
+            <a href="#" class="sidebar-link pe-4">
+              DESSERT
+            </a>
+          </li>
+          <li>
+            <a href="#" class="sidebar-link pe-4">
+              EXHIBITIONS
+            </a>
+          </li>
+        </ul>
+        <ul class="overflow-auto mt-3 list-unstyled fs-5">
+          <li>
+            <a href="#" class="link-secondary">
+              ABOUT
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link-secondary">
+              CONTACT
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="main">
+        <div class="container py-5">
+          <div class="grid">
+            <div class="grid-sizer"></div>
+            <div class="grid-item">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
+            </div>
+            <div class="grid-item animation-delay-1">
+              <img src="./image/benjamin-voros-phIFdC6lA4E-unsplash.jpg" />
+            </div>
+            <div class="grid-item animation-delay-2">
+              <img class="" src="./image/boxed-water-is-better-7HVHS0idAdY-unsplash.jpg" />
+            </div>
+            <div class="grid-item animation-delay-3">
+              <img class="" src="./image/boxed-water-is-better-9fl-u7IcgOY-unsplash.jpg" />
+            </div>
+            <div class="grid-item animation-delay-4">
+              <img class="" src="./image/daniel-leone-g30P1zcOzXo-unsplash.jpg" />
+            </div>
+            <div class="grid-item animation-delay-5">
+              <img class="" src="./image/guillaume-briard-lSXpV8bDeMA-unsplash.jpg" />
+            </div>
+            <div class="grid-item animation-delay-6">
+              <img class="" src="./image/jerry-zhang-ePpaQC2c1xA-unsplash.jpg" />
+            </div>
+            <div class="grid-item animation-delay-7">
+              <img class="" src="./image/jonny-mckenna-4igCpD-Lnfg-unsplash.jpg" />
+            </div>
+            <div class="grid-item animation-delay-8">
+              <img class="" src="./image/mads-schmidt-rasmussen-xfngap_DToE-unsplash.jpg" />
+            </div>
+            <div class="grid-item animation-delay-9">
+              <img class="" src="./image/tobias-keller-73F4pKoUkM0-unsplash.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+    <script>
+      var $grid = $('.grid').masonry({
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        columnWidth: '.grid-sizer',
+        gutter: 8,
+        transitionDuration: '0.8s'
+      });
+      // layout Masonry after each image loads
+      $grid.imagesLoaded().progress( function() {
+        $grid.masonry();
+      });
+    </script>
+  </body>
+</html>
